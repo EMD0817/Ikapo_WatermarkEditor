@@ -18,22 +18,33 @@
       <button class="upload-button">画像を選択</button>
       <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
       <p class="info-text">すべての処理はデバイス内で行われます。<br>画像を含め外部に送信される情報は、なにもありません。</p>
-      <p class="info-text"><a href="https://github.com" target="_blank">GitHubでしくみを確認する ></a></p>
+      <p class="info-text"><a href="https://github.com/EMD0817/Ikapo_WatermarkEditor" target="_blank">GitHubでしくみを確認する
+          ></a></p>
     </div>
+  </div>
+
+
+  <div class="imgPreview">
+    <img id="previewImage" src="images/deleteme.jpg" alt="Image Preview">
   </div>
 
   <div class="footer">
     <a href="#" class="footer-icon">
       <div>透かしを変更</div>
     </a>
-    <a href="#" class="footer-icon">
+    <a href="#" class="footer-icon" onclick="location.reload();">
       <img src="images/new.svg" alt="New Icon">
       <div>新規作成</div>
     </a>
+    </a>
     <a href="#" class="footer-icon">
-      <img src="images\share.svg" alt="New Icon">
+      <img src="images/share.svg" alt="New Icon">
       <div>保存と投稿</div>
     </a>
+  </div>
+
+  <div class="">
+
   </div>
 
   <script src="script.js"></script>
