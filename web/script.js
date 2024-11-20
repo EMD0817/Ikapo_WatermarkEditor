@@ -4,34 +4,31 @@ const containerClass = document.querySelector('.container');
 const imgPreviewClass = document.querySelector('.imgPreview');
 const footerClass = document.querySelector('.footer');
 const previewImageID = document.querySelector('#previewImage');
+let inputIMGSucceeded = false;
 
 document.querySelector('.upload-button').addEventListener('click', function () {
     document.getElementById('imageUpload').click();
 });
 
 function handleImageUpload(event) {
-    let inputIMGSucceeded = true;
     const file = event.target.files[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onload = function (e) {
         InputIMG.onload = function () {
+            inputIMGSucceeded = true;
             // Image is valid
             // You can now use InputIMG for further processing
+            OutputIMG.src = InputIMG.src;
+            previewImg(OutputIMG);
         };
         InputIMG.onerror = function () {
-            inputIMGSucceeded = false;
             alert('有効な画像ファイルをアップロードしてください。');
         };
         InputIMG.src = e.target.result;
     };
-
     reader.readAsDataURL(file);
-
-    OutputIMG.src = InputIMG.src;
-    previewImg(OutputIMG);
-
     containerClass.style.display = 'none';
     imgPreviewClass.style.display = 'flex';
     footerClass.style.display = 'flex';
