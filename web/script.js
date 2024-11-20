@@ -6,7 +6,8 @@ const footerClass = document.querySelector('.footer');
 const previewImageID = document.querySelector('#previewImage');
 let inputIMGSucceeded = false;
 const watermarks = [
-    "watermarks/W01.png"
+    "watermarks/W01.png",
+    "watermarks/W02.png"
 ];
 
 document.querySelector('.upload-button').addEventListener('click', function () {
@@ -23,7 +24,7 @@ function handleImageUpload(event) {
             inputIMGSucceeded = true;
             // Image is valid
             // You can now use InputIMG for further processing
-            compositeWatermark(InputIMG, watermarks[0]).then((dataURL) => {
+            compositeWatermark(InputIMG, watermarks[1]).then((dataURL) => {
                 OutputIMG.src = dataURL;
                 previewImg(OutputIMG);
             });
