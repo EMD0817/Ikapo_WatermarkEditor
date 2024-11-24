@@ -24,7 +24,7 @@ function handleImageUpload(event) {
             inputIMGSucceeded = true;
             // Image is valid
             // You can now use InputIMG for further processing
-            compositeWatermark(InputIMG, watermarks[1]).then((dataURL) => {
+            compositeWatermark(InputIMG, watermarks[0]).then((dataURL) => {
                 OutputIMG.src = dataURL;
                 previewImg(OutputIMG);
             });
@@ -39,6 +39,28 @@ function handleImageUpload(event) {
     containerClass.style.display = 'none';
     imgPreviewClass.style.display = 'flex';
     footerClass.style.display = 'flex';
+}
+
+function selectWatermark(id) {
+    toggleSelectionBox(false);
+    previewImageID.src = '';
+    compositeWatermark(InputIMG, watermarks[id-1]).then((dataURL) => {
+        OutputIMG.src = dataURL;
+        previewImg(OutputIMG);
+    });
+}
+
+function toggleSelectionBox(show) {
+    const selectionBox = document.querySelector('.selection-box');
+    const overlay = document.querySelector('.overlay');
+
+    if (show) {
+        selectionBox.style.display = 'flex';
+        overlay.style.display = 'block';
+    } else {
+        selectionBox.style.display = 'none';
+        overlay.style.display = 'none';
+    }
 }
 
 function compositeWatermark(input, watermarkPath) {

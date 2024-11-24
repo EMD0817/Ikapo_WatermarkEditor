@@ -61,6 +61,25 @@ body {
   color: #bbb;
 }
 
+
+.imgPreview {
+  width: 100%;
+  height: calc(100vh - 93px);
+  /* .footerの高さを考慮 */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#previewImage {
+  width: 100%;
+  height: calc(100vh - 93px);
+  /* .footerの高さを考慮 */
+  object-fit: contain;
+  /* クロップしないようにサイズを調整 */
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -100,20 +119,71 @@ body {
   margin-top: 3px;
 }
 
-.imgPreview {
-  width: 100%;
-  height: calc(100vh - 93px);
-  /* .footerの高さを考慮 */
+/* 選択ボックスのスタイル */
+.selection-box {
   display: none;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 100px;
+  width: 90%;
+  left: 5%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
 }
 
-#previewImage {
+.selection-header {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.selection-item {
+  background-color: #f3f3f3;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.selection-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.selection-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.sub-text {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.selection-item:hover {
+  background-color: #ddd;
+}
+
+/* オーバーレイのスタイル */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: calc(100vh - 93px);
-  /* .footerの高さを考慮 */
-  object-fit: contain;
-  /* クロップしないようにサイズを調整 */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }

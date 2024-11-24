@@ -29,14 +29,13 @@
   </div>
 
   <div class="footer">
-    <a href="#" class="footer-icon">
-      <img src="Watermarks_Icon/WI01.png" alt="New Icon">
+    <a href="#" class="footer-icon" onclick="toggleSelectionBox(true);">
+      <img src="images/stars.svg" alt="New Icon">
       <div>透かしを変更</div>
     </a>
     <a href="#" class="footer-icon" onclick="location.reload();">
       <img src="images/new.svg" alt="New Icon">
       <div>新規作成</div>
-    </a>
     </a>
     <a href="#" class="footer-icon">
       <img src="images/share.svg" alt="New Icon">
@@ -44,9 +43,28 @@
     </a>
   </div>
 
-  <div class="">
+  <!-- 背景の暗転用オーバーレイ -->
+  <div class="overlay" onclick="toggleSelectionBox(false)"></div>
 
+  <div class="selection-box">
+    <div class="selection-header">画像を選択してください</div>
+    <div class="selection-item" onclick="selectWatermark(1)">
+      <img src="Watermarks_Icon/WI01.png" alt="Image Icon" class="selection-image">
+      <div class="selection-texts">
+        <div class="main-text">イカぽ - 01</div>
+        <!-- <div class="sub-text">サブテキスト</div> -->
+      </div>
+    </div>
+    <div class="selection-item" onclick="selectWatermark(2)">
+      <img src="Watermarks_Icon/WI02.png" alt="Image Icon" class="selection-image">
+      <div class="selection-texts">
+        <div class="main-text">イカぽ - 02</div>
+        <!-- <div class="sub-text">サブテキスト</div> -->
+      </div>
+    </div>
   </div>
+
+
 
   <script src="script.js"></script>
 </body>
