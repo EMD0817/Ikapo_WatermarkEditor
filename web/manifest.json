@@ -1,0 +1,13 @@
+{
+    "short_name": "ウォーターマークぽ",
+    "name": "ウォーターマークぽ",
+    "display": "standalone",
+    "start_url": "index.html",
+    "icons": [
+        {
+            "src": "Watermarks_Icon/WI01.png",
+            "sizes": "841x702",
+            "type": "image/png"
+        }
+    ]
+}
