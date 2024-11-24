@@ -12,6 +12,7 @@ body {
   background-color: #333;
   color: white;
   margin: 0;
+  user-select: none;
 }
 
 .container {
@@ -186,4 +187,60 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+
+/* 保存選択ボックスのスタイル */
+.deliver-selection-box {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 100px;
+  width: 90%;
+  left: 5%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.deliver-selection-header {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.deliver-selection-item {
+  background-color: #f3f3f3;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.deliver-selection-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.deliver-selection-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.sub-text {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.deliver-selection-item:hover {
+  background-color: #ddd;
 }

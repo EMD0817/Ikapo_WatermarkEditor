@@ -37,14 +37,14 @@
       <img src="images/new.svg" alt="New Icon">
       <div>新規作成</div>
     </a>
-    <a href="#" class="footer-icon">
+    <a href="#" class="footer-icon" onclick="toggleDeliverSelectionBox(true);">
       <img src="images/share.svg" alt="New Icon">
       <div>保存と投稿</div>
     </a>
   </div>
 
   <!-- 背景の暗転用オーバーレイ -->
-  <div class="overlay" onclick="toggleSelectionBox(false)"></div>
+  <div class="overlay" onclick="toggleSelectionBox(false);toggleDeliverSelectionBox(false);"></div>
 
   <div class="selection-box">
     <div class="selection-header">画像を選択してください</div>
@@ -59,6 +59,31 @@
       <img src="Watermarks_Icon/WI02.png" alt="Image Icon" class="selection-image">
       <div class="selection-texts">
         <div class="main-text">イカぽ - 02</div>
+        <!-- <div class="sub-text">サブテキスト</div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="deliver-selection-box">
+    <div class="deliver-selection-header">作成した画像の権利は引き続き製作者にあります。<br>ご自身の責任において、あらゆる用途で使用することができます。</div>
+    <div class="deliver-selection-item" onclick="selectDeliver('png')">
+      <img src="images\download.svg" alt="Image Icon" class="deliver-selection-image">
+      <div class="deliver-selection-texts">
+        <div class="main-text">PNGで保存</div>
+        <!-- <div class="sub-text">サブテキスト</div> -->
+      </div>
+    </div>
+    <div class="deliver-selection-item" onclick="selectDeliver('jpg')">
+      <img src="images\download.svg" alt="Image Icon" class="deliver-selection-image">
+      <div class="deliver-selection-texts">
+        <div class="main-text">JPEGで保存</div>
+        <!-- <div class="sub-text">サブテキスト</div> -->
+      </div>
+    </div>
+    <div class="deliver-selection-item" onclick="selectDeliver('x-post')">
+      <img src="images\X - Logo.svg" alt="Image Icon" class="deliver-selection-image">
+      <div class="deliver-selection-texts">
+        <div class="main-text">Twitter/Xに投稿</div>
         <!-- <div class="sub-text">サブテキスト</div> -->
       </div>
     </div>

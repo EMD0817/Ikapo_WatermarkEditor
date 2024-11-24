@@ -9,6 +9,7 @@ const watermarks = [
     "watermarks/W01.png",
     "watermarks/W02.png"
 ];
+let fileName = '';
 
 document.querySelector('.upload-button').addEventListener('click', function () {
     document.getElementById('imageUpload').click();
@@ -17,6 +18,8 @@ document.querySelector('.upload-button').addEventListener('click', function () {
 function handleImageUpload(event) {
     const file = event.target.files[0];
     if (!file) return;
+
+    fileName = file.name.replace(/\.[^/.]+$/, ""); // ファイル名から拡張子を取り除く
 
     const reader = new FileReader();
     reader.onload = function (e) {
@@ -44,14 +47,70 @@ function handleImageUpload(event) {
 function selectWatermark(id) {
     toggleSelectionBox(false);
     previewImageID.src = '';
-    compositeWatermark(InputIMG, watermarks[id-1]).then((dataURL) => {
+    compositeWatermark(InputIMG, watermarks[id - 1]).then((dataURL) => {
         OutputIMG.src = dataURL;
         previewImg(OutputIMG);
     });
 }
 
+function selectDeliver(id) {
+    // ファイル名を設定
+    const baseFileName = (fileName === 'xxx') ? `Watermark_${fileName}` : fileName;
+    let imageDataURL;
+
+    // Canvasを作成し、OutputIMGを描画してデータURLを取得
+    const canvas = document.createElement('canvas');
+    canvas.width = OutputIMG.width;
+    canvas.height = OutputIMG.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(OutputIMG, 0, 0);
+
+    if (id === 'png') {
+        // PNGファイルとして保存
+        imageDataURL = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = imageDataURL;
+        link.download = `${baseFileName}.png`;
+        link.click();
+
+    } else if (id === 'jpg') {
+        // JPGファイルとして保存
+        imageDataURL = canvas.toDataURL('image/jpeg');
+        const link = document.createElement('a');
+        link.href = imageDataURL;
+        link.download = `${baseFileName}.jpg`;
+        link.click();
+
+    } else if (id === 'x-post') {
+        // Twitterに画像をツイート
+        imageDataURL = canvas.toDataURL('image/png');
+        const encodedImage = encodeURIComponent(imageDataURL);
+
+        // TwitterのWeb Intent URLを生成
+        const tweetText = "Check out this image!";
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodedImage}`;
+
+        // 新しいタブで開く
+        window.open(twitterUrl, '_blank');
+    }
+}
+
+
 function toggleSelectionBox(show) {
     const selectionBox = document.querySelector('.selection-box');
+    const overlay = document.querySelector('.overlay');
+
+    if (show) {
+        selectionBox.style.display = 'flex';
+        overlay.style.display = 'block';
+    } else {
+        selectionBox.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+}
+
+function toggleDeliverSelectionBox(show) {
+    const selectionBox = document.querySelector('.deliver-selection-box');
     const overlay = document.querySelector('.overlay');
 
     if (show) {
