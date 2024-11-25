@@ -11,6 +11,8 @@ const watermarks = [
     "watermarks/W03.png",
     "watermarks/W04.png",
     "watermarks/W05.png",
+    "watermarks/W06.png",
+    "watermarks/W07.png",
 ];
 let fileName = '';
 

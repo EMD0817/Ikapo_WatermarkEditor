@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ikapo-watermark-editor-cache-v1.2';
+const CACHE_NAME = 'ikapo-watermark-editor-cache-v2.0';
 const urlsToCache = [
     '/Ikapo_WatermarkEditor/web/',
     '/Ikapo_WatermarkEditor/web/index.html',
@@ -17,11 +17,15 @@ const urlsToCache = [
     '/Ikapo_WatermarkEditor/web/watermarks/W03.png',
     '/Ikapo_WatermarkEditor/web/watermarks/W04.png',
     '/Ikapo_WatermarkEditor/web/watermarks/W05.png',
+    '/Ikapo_WatermarkEditor/web/watermarks/W06.png',
+    '/Ikapo_WatermarkEditor/web/watermarks/W07.png',
     '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI01.png',
     '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI02.png',
     '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI03.png',
     '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI04.png',
     '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI05.png',
+    '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI06.png',
+    '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI07.png',
 ];
 
 self.addEventListener('install', event => {
