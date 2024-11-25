@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ikapo-watermark-editor-cache-v1';
+const CACHE_NAME = 'ikapo-watermark-editor-cache-v1.1';
 const urlsToCache = [
     '/Ikapo_WatermarkEditor/web/',
     '/Ikapo_WatermarkEditor/web/index.html',
@@ -10,7 +10,6 @@ const urlsToCache = [
     '/Ikapo_WatermarkEditor/web/images/stars.svg',
     '/Ikapo_WatermarkEditor/web/images/new.svg',
     '/Ikapo_WatermarkEditor/web/images/share.svg',
-    '/Ikapo_WatermarkEditor/web/images/X - Logo.svg',
     '/Ikapo_WatermarkEditor/web/watermarks/W01.png',
     '/Ikapo_WatermarkEditor/web/watermarks/W02.png',
     '/Ikapo_WatermarkEditor/web/watermarks/W03.png',

@@ -90,6 +90,7 @@ body {
   justify-content: space-around;
   padding: 10px 0;
   display: none;
+  gap: 10px; /* ボタン間の隙間を追加 */
 }
 
 .footer div {
@@ -109,6 +110,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1; /* 各ボタンが均等に幅を取るようにする */
+  text-align: center; /* テキストを中央揃えにする */
 }
 
 .footer-icon:hover {

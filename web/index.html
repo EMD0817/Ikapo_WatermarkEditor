@@ -41,7 +41,7 @@
     </a>
     <a href="#" class="footer-icon" onclick="toggleDeliverSelectionBox(true);">
       <img src="images/share.svg" alt="New Icon">
-      <div>保存と投稿</div>
+      <div>保存</div>
     </a>
   </div>
 
@@ -105,26 +105,20 @@
         <!-- <div class="sub-text">サブテキスト</div> -->
       </div>
     </div>
-    <div class="deliver-selection-item" onclick="selectDeliver('x-post')">
-      <img src="images\X - Logo.svg" alt="Image Icon" class="deliver-selection-image">
-      <div class="deliver-selection-texts">
-        <div class="main-text">Twitter/Xに投稿</div>
-        <!-- <div class="sub-text">サブテキスト</div> -->
-      </div>
-    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 <script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/Ikapo_WatermarkEditor/web/service_worker.js').then(function(registration) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/Ikapo_WatermarkEditor/web/service_worker.js').then(function (registration) {
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
+      }, function (err) {
         console.log('ServiceWorker registration failed: ', err);
       });
     });
   }
 </script>
+
 </html>

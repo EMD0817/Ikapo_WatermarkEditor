@@ -85,17 +85,6 @@ function selectDeliver(id) {
         link.download = `${baseFileName}.jpg`;
         link.click();
 
-    } else if (id === 'x-post') {
-        // Twitterに画像をツイート
-        imageDataURL = canvas.toDataURL('image/png');
-        const encodedImage = encodeURIComponent(imageDataURL);
-
-        // TwitterのWeb Intent URLを生成
-        const tweetText = "Check out this image!";
-        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodedImage}`;
-
-        // 新しいタブで開く
-        window.open(twitterUrl, '_blank');
     }
 }
 
