@@ -13,8 +13,14 @@ const urlsToCache = [
     '/Ikapo_WatermarkEditor/web/images/X - Logo.svg',
     '/Ikapo_WatermarkEditor/web/watermarks/W01.png',
     '/Ikapo_WatermarkEditor/web/watermarks/W02.png',
+    '/Ikapo_WatermarkEditor/web/watermarks/W03.png',
+    '/Ikapo_WatermarkEditor/web/watermarks/W04.png',
+    '/Ikapo_WatermarkEditor/web/watermarks/W05.png',
     '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI01.png',
     '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI02.png',
+    '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI03.png',
+    '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI04.png',
+    '/Ikapo_WatermarkEditor/web/Watermarks_Icon/WI05.png',
 ];
 
 self.addEventListener('install', event => {

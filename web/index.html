@@ -48,24 +48,47 @@
   <!-- 背景の暗転用オーバーレイ -->
   <div class="overlay" onclick="toggleSelectionBox(false);toggleDeliverSelectionBox(false);"></div>
 
+  <!-- ウォーターマーク選択ボックス -->
   <div class="selection-box">
     <div class="selection-header">画像を選択してください</div>
     <div class="selection-item" onclick="selectWatermark(1)">
       <img src="Watermarks_Icon/WI01.png" alt="Image Icon" class="selection-image">
       <div class="selection-texts">
-        <div class="main-text">イカぽ - 01</div>
+        <div class="main-text">イカぽ01</div>
         <!-- <div class="sub-text">サブテキスト</div> -->
       </div>
     </div>
     <div class="selection-item" onclick="selectWatermark(2)">
       <img src="Watermarks_Icon/WI02.png" alt="Image Icon" class="selection-image">
       <div class="selection-texts">
-        <div class="main-text">イカぽ - 02</div>
+        <div class="main-text">イカぽ02</div>
         <!-- <div class="sub-text">サブテキスト</div> -->
+      </div>
+    </div>
+    <div class="selection-item" onclick="selectWatermark(3)">
+      <img src="Watermarks_Icon/WI03.png" alt="Image Icon" class="selection-image">
+      <div class="selection-texts">
+        <div class="main-text">男性01-01</div>
+        <div class="sub-text">ご自身の責任で使用してください</div>
+      </div>
+    </div>
+    <div class="selection-item" onclick="selectWatermark(4)">
+      <img src="Watermarks_Icon/WI04.png" alt="Image Icon" class="selection-image">
+      <div class="selection-texts">
+        <div class="main-text">男性01-02</div>
+        <div class="sub-text">ご自身の責任で使用してください</div>
+      </div>
+    </div>
+    <div class="selection-item" onclick="selectWatermark(5)">
+      <img src="Watermarks_Icon/WI05.png" alt="Image Icon" class="selection-image">
+      <div class="selection-texts">
+        <div class="main-text">男性01-03</div>
+        <div class="sub-text">ご自身の責任で使用してください</div>
       </div>
     </div>
   </div>
 
+  <!-- 保存と投稿選択ボックス -->
   <div class="deliver-selection-box">
     <div class="deliver-selection-header">作成した画像の権利は引き続き製作者にあります。<br>ご自身の責任において、あらゆる用途で使用することができます。</div>
     <div class="deliver-selection-item" onclick="selectDeliver('png')">

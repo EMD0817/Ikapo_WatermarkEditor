@@ -7,7 +7,10 @@ const previewImageID = document.querySelector('#previewImage');
 let inputIMGSucceeded = false;
 const watermarks = [
     "watermarks/W01.png",
-    "watermarks/W02.png"
+    "watermarks/W02.png",
+    "watermarks/W03.png",
+    "watermarks/W04.png",
+    "watermarks/W05.png",
 ];
 let fileName = '';
 
@@ -35,6 +38,7 @@ function handleImageUpload(event) {
         };
         InputIMG.onerror = function () {
             alert('有効な画像ファイルをアップロードしてください。');
+            window.location.reload();
         };
         InputIMG.src = e.target.result;
     };
